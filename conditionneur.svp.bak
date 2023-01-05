@@ -1,0 +1,82 @@
+LIST TESTBENCHES
+courant_constant
+convertisseur
+convhyst1
+oscillateur
+ENDLIST
+ACTIVE_TESTBENCH oscillateur
+SECTION courant_constant
+TYPE SCH
+NL_OPTION SPICE ENTINST USELIBS PAREXT
+SIM_SPICE 1
+DESIGN_ROOT genhdl\courant_constant\courant_constant.cir
+LIST VHDL
+%SV_ROOT%\win32\edulib\%admsver%\Electrical\i_pulse.vhd
+%SV_ROOT%\win32\edulib\%admsver%\Electrical\capacitor.vhd
+ENDLIST
+LIST SPICE
+genhdl\courant_constant\courant_constant.cir
+ENDLIST
+LIST EXPERIMENT
+expt1.cmd
+ENDLIST
+ENDSECTION
+SECTION convertisseur
+TYPE SCH
+NL_OPTION SPICE ENTINST USELIBS PAREXT
+SIM_SPICE 1
+DESIGN_ROOT genhdl\convertisseur\convertisseur.cir
+LIST VHDL
+%SV_ROOT%\win32\edulib\%admsver%\Electrical\resistor.vhd
+%SV_ROOT%\win32\edulib\%admsver%\Electrical\capacitor.vhd
+%SV_ROOT%\win32\Libraries\SVLib\.\hdl\xcond_fltr.vhd
+%SV_ROOT%\win32\edulib\%admsver%\Electrical\v_pulse.vhd
+ENDLIST
+LIST SPICE
+genhdl\convertisseur\convertisseur.cir
+ENDLIST
+LIST EXPERIMENT
+expt1.cmd
+ENDLIST
+ENDSECTION
+SECTION convhyst1
+TYPE SCH
+NL_OPTION SPICE ENTINST USELIBS PAREXT
+SIM_SPICE 1
+DESIGN_ROOT genhdl\convhyst1\convhyst1.cir
+LIST VHDL
+%SV_ROOT%\win32\edulib\%admsver%\Electrical\resistor.vhd
+%SV_ROOT%\win32\edulib\%admsver%\Electrical\capacitor.vhd
+%SV_ROOT%\win32\Libraries\SVLib\.\hdl\xcond_fltr.vhd
+%SV_ROOT%\win32\edulib\%admsver%\Electrical\v_pulse.vhd
+ENDLIST
+LIST SPICE
+genhdl\convhyst1\convhyst1.cir
+ENDLIST
+LIST EXPERIMENT
+expt1.cmd
+expt1.cmd
+ENDLIST
+ENDSECTION
+SECTION oscillateur
+TYPE SCH
+NL_OPTION SPICE ENTINST USELIBS PAREXT
+SIM_SPICE 1
+DESIGN_ROOT genhdl\oscillateur\oscillateur.cir
+LIST VHDL
+%SV_ROOT%\win32\edulib\%admsver%\Electrical\resistor.vhd
+%SV_ROOT%\win32\edulib\%admsver%\Electrical\capacitor.vhd
+%SV_ROOT%\win32\Libraries\SVLib\.\hdl\xcond_fltr.vhd
+ENDLIST
+LIST SPICE
+genhdl\oscillateur\oscillateur.cir
+ENDLIST
+LIST EXPERIMENT
+expt1.cmd
+ENDLIST
+ENDSECTION
+LIST ADDITIONAL ADMS LIBRARIES
+ENDLIST
+LIST SPICE LIBRARIES
+%SV_ROOT%\win32\Libraries\SVLib\SVLib_Spice.lib
+ENDLIST
